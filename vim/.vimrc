@@ -46,5 +46,4 @@ set fileformat=unix
 set fencs=utf-8,cp1251,koi8-r,cp866
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
-cmap x!! x !sudo tee > /dev/null %
 cmap w!! w !sudo tee > /dev/null %
