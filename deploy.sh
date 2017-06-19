@@ -12,8 +12,11 @@ cp -f ./bash/.bash_profile ~/.bash_profile
 # vim
 cp -f ./vim/.vimrc ~/.vimrc
 
-#git
+# git
 cp -f ./git/.gitconfig ~/.gitconfig
 
-# Yum
+# tmux
+cp -f ./tmux/.tmux.conf ~/.tmux.conf
+
+# yum
 yum -y install $(cat yum/rpmlist)

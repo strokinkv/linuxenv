@@ -48,3 +48,6 @@ zip
 bc
 iotop
 git
+tmux
+hdparm
+davfs2
