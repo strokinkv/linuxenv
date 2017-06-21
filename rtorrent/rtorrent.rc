@@ -1,0 +1,21 @@
+schedule = watch_directory_local, 5, 5, "load_start=/data/td/torrents/*.torrent, d.set_directory=/data/td/"
+schedule = watch_directory_other, 5, 5, "load_start=/data/yandex/torrents/other/*.torrent, d.set_directory=/data/td/other/"
+schedule = watch_directory_audio, 5, 5, "load_start=/data/yandex/torrents/audio/*.torrent, d.set_directory=/data/td/audio/"
+schedule = watch_directory_video, 5, 5, "load_start=/data/yandex/torrents/video/*.torrent, d.set_directory=/data/td/video/"
+schedule = watch_directory_yandex, 5, 5, "load_start=/data/yandex/torrents/yandex/*.torrent, d.set_directory=/data/yandex/torrents/"
+
+max_uploads = 10
+download_rate = 0
+upload_rate = 1024
+directory = /data/td
+session = /data/td/.session
+port_range = 40890-40890
+port_random = no
+peer_exchange = yes
+check_hash = yes
+session_save = yes
+use_udp_trackers = yes
+dht = auto
+dht_port = 6881
+encryption = allow_incoming,enable_retry,prefer_plaintext
+encoding_list = UTF-8
