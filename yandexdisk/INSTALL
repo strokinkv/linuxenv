@@ -1,7 +1,8 @@
-### yandex disk
-yum -y install http://repo.yandex.ru/yandex-disk/yandex-disk-latest.x86_64.rpm
+# install yandex disk
+yum install http://repo.yandex.ru/yandex-disk/yandex-disk-latest.x86_64.rpm
+# launch wizzard
 yandex-disk setup
-# Отвечаем на вопрос визарда
+# service file
 cat << EOF > /etc/systemd/system/yandex-disk.service
 [Unit]
 Description=Yandex Disk Service
@@ -17,6 +18,7 @@ ExecStop=/usr/bin/yandex-disk stop
 [Install]
 WantedBy=multi-user.target
 EOF
+# enable service
 systemctl --system daemon-reload
 systemctl enable yandex-disk
 systemctl start yandex-disk
