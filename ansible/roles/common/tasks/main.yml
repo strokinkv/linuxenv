@@ -1,0 +1,12 @@
+- name: Install tmux
+  yum:
+    name: "{{ item }}"
+    state: installed
+  with_items:
+    - tmux
+    - vim
+
+- name: Config for root
+  copy:
+    src: tmux.conf
+    dest: /root/.tmux.conf
