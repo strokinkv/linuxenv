@@ -1,8 +1,13 @@
-# install yandex disk
+### Install yandex disk
+```
 yum install http://repo.yandex.ru/yandex-disk/yandex-disk-latest.x86_64.rpm
-# launch wizzard
+```
+### Launch wizzard
+```
 yandex-disk setup
-# service file
+```
+### Create service file for systemd
+```
 cat << EOF > /etc/systemd/system/yandex-disk.service
 [Unit]
 Description=Yandex Disk Service
@@ -18,7 +23,10 @@ ExecStop=/usr/bin/yandex-disk stop
 [Install]
 WantedBy=multi-user.target
 EOF
-# enable service
+```
+### Enable and start service
+```
 systemctl --system daemon-reload
 systemctl enable yandex-disk
 systemctl start yandex-disk
+```
