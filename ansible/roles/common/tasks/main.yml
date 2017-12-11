@@ -1,12 +1,50 @@
-- name: Install tmux
+- name: Install common rpm packages
   yum:
     name: "{{ item }}"
     state: installed
   with_items:
     - tmux
     - vim
+    - bash-completion
+    - bind-utils
+    - dstat
+    - gcc-c++
+    - iotop
+    - lsof
+    - lsscsi
+    - man-pages
+    - mc
+    - mtr
+    - nc
+    - nmap
+    - strace
+    - symlinks
+    - sysstat
+    - tcpdump
+    - telnet
+    - traceroute
+    - tree
+    - unzip
+    - wget
+    - zip
+    - bc
 
-- name: Config for root
+- name: Deploy .bash_profile
+  copy:
+    src: bash_profile
+    dest: /root/.bash_profile
+
+- name: Config for vim
+  copy:
+    src: vimrc
+    dest: /root/.vimrc
+
+- name: Config for tmux
   copy:
     src: tmux.conf
     dest: /root/.tmux.conf
+
+- name: Config for git
+  copy:
+    src: gitconfig
+    dest: /root/.gitconfig

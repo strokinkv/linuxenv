@@ -1,8 +1,0 @@
-[user]
-	name = Строкин Кирилл Владимирович
-	email = strokinkv@gmail.com
-[core]
-	autocrlf = input
-	safecrlf = true
-[push]
-	default = simple
