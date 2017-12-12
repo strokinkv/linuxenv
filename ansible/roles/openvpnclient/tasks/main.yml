@@ -1,0 +1,4 @@
+- name: Install rpm OpenVPN
+  yum:
+    name: openvpn
+    state: installed

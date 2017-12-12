@@ -1,0 +1,10 @@
+---
+- name: Deploy OpenVPN server
+  hosts: openvpnserver
+  roles:
+    - openvpnserver
+
+- name: Deploy OpenVPN client
+  hosts: openvpnclient
+  roles:
+    - openvpnclient

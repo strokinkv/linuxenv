@@ -1,0 +1,9 @@
+- name: Install rpm OpenVPN
+  yum:
+    name: openvpn
+    state: installed
+
+- name: Config for OpenVPN server
+  copy:
+    src: server.conf
+    dest: /etc/openvpn/server.conf

@@ -28,6 +28,7 @@
     - wget
     - zip
     - bc
+    - epel-release
 
 - name: Deploy .bash_profile
   copy:

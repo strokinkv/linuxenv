@@ -1,0 +1,4 @@
+[openvpnserver]
+localhost ansible_connection=local
+
+[openvpnclient]
