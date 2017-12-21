@@ -14,6 +14,7 @@
     - lsscsi
     - man-pages
     - mc
+    - mlocate
     - mtr
     - nc
     - nmap
